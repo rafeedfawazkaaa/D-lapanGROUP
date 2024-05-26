@@ -1,0 +1,223 @@
+:root {
+    
+    --primary: #d2691e
+    --bg: #805000
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body{
+    background-image: url(tingfeng-xia-LqVCN0QiKXk-unsplash.jpg);
+    background-repeat: repeat;
+    background-position: center;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+    color: #020202;
+    /* min-height: 2000px;*/
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 8%;
+    background-color: rgba(1, 33, 58, 0.8);
+    border-bottom: 1.5px solid #b71f98;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar .navbar-logo {
+    font-size: 3rem;
+    font-weight: 700;
+    align-items: center;
+    color: aliceblue;
+    font-style: italic;
+}
+
+.navbar .navbar-logo span {
+    color: chocolate;
+}
+
+.navbar .navbar-nav a {
+color: #fff;
+display: inline-block;
+font-size: 1.2rem;
+margin: 0 1.5rem;
+}
+
+.navbar .navbar-nav a:hover {
+    color: chocolate;
+}
+
+.navbar .navbar-nav a::after {
+   content: '';
+   display: block;
+   padding-bottom: 0.5rem;
+   border-bottom: 0.1rem solid color(srgb 210,105,30);
+   transform: scaleX(0);
+   transition: 0,2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(1) ;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url(../asset/name.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    
+}
+
+
+.hero::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    background: linear-gradient(0deg, rgba(1, 1, 3, 1)8%, rgba(255, 255, 255, 0)50%);
+}
+
+
+.hero .content{
+    padding: 1.4rem 7%;
+    max-width: 60rem;
+}
+
+
+.hero .content h1{
+    font-size: 5em;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(1, 1, 1, 0.5);
+    line-height: 1.2;
+}
+
+
+
+.hero .content ol{
+    font-size: 1.6rem;
+    margin-top: 3rem;
+    min-height: 1.4;
+    font-weight: 100;
+    text-shadow: 1px 1px 3px rgba(1, 1, 1, 0.5);
+    color: white;
+    line-height: 1.5;
+}
+
+.hero .content li {
+  list-style-type: circle;
+}
+
+h4 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: x-large;
+    color: rgb(245, 236, 238);
+    line-height: 8;
+}
+iframe {
+    margin: auto;
+    display: block;
+    width: 500px;
+}
+
+.slider {
+    position: relative;
+    width: 60%;
+    overflow: hidden;
+}
+.images {
+    max-width: 100%; 
+    display:block; 
+    height: auto;
+    width: 100%;
+    float: left;
+}
+    
+.images img {
+    height: 400px;
+    width: 100%;
+    transition: all 0.15s ease;
+}
+.images input {
+    display: none;
+}
+.dots {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+.dots label {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: solid #fff 3px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    margin: 5px;
+}
+.dots label:hover {background: #fff;}
+#img1:checked ~ .m1 {
+    margin-left: 0;
+}
+#img2:checked ~ .m1 {
+    margin-left: -100%;
+}
+#img3:checked ~ .m1 {
+    margin-left: -200%;
+}
+#img4:checked ~ .m1 {
+    margin-left: -300%;
+}
+#img5:checked ~ .m1 {
+    margin-left: -400%;
+}
+#img6:checked ~ .m1 {
+    margin-left: -500%;
+}
+#img7:checked ~ .m1 {
+    margin-left: -600%;
+}
+
+/* Laptop */
+@media (max-width: 1366px) {
+    html {
+        font-size: 75%;
+    }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    html {
+        font-size: 62.5%;
+    }
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+    html {
+        font-size: 55%;
+    }
+}
+
